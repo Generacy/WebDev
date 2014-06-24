@@ -11,230 +11,100 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+	
 
     <!-- Add custom CSS here -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	
+	<link href="css/gallery.css" rel="stylesheet">
 	<link rel="shortcut icon" href="img/justin_paterson.jpg" />
 </head>
 
 <body>
 
-    <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand"><a href="http://startbootstrap.com">Start Bootstrap</a>
-            </li>
-            <li><a href="#top">Home</a>
-            </li>
-            <li><a href="#about">About</a>
-            </li>
-            <li><a href="#services">Services</a>
-            </li>
-            <li><a href="#portfolio">Portfolio</a>
-            </li>
-            <li><a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /Side Menu -->
+<div class="container">
+<h1>Bootstrap 3 Thumbnail Slider / Carousel</h1>
 
-    <!-- Full Page Image Header Area -->
-    <div id="top" class="header">
-        <div class="vert-text">
-            <h1>Ember Technologies</h1>
-            <h3>
-                <em>Finished</em> Basements,
-                <em>Affordable</em> Price</h3>
-            <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
+  
+  	<!-- thumb navigation carousel -->
+    <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+        
+            <!-- thumb navigation carousel items -->
+          <ul class="list-inline">
+          <li> <a id="carousel-selector-0" class="selected">
+            <img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-1">
+            <img src="http://placehold.it/80x60&amp;text=two" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-2">
+            <img src="http://placehold.it/80x60&amp;text=three" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-3">
+            <img src="http://placehold.it/80x60&amp;text=four" class="img-responsive">
+          </a></li>
+                <li> <a id="carousel-selector-4">
+            <img src="http://placehold.it/80x60&amp;text=five" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-5">
+            <img src="http://placehold.it/80x60&amp;text=six" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-6">
+            <img src="http://placehold.it/80x60&amp;text=seven" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-7">
+            <img src="http://placehold.it/80x60&amp;text=eight" class="img-responsive">
+          </a></li>
+            </ul>
+        
+    </div>
+  
+  
+    <!-- main slider carousel -->
+    <div class="row">
+        <div class="col-md-12" id="slider">
+            
+                <div class="col-md-12" id="carousel-bounding-box">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item" data-slide-number="0">
+                                <img src="http://placehold.it/1200x480&amp;text=one" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="1">
+                              <img src="http://placehold.it/1200x480/888/FFF" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="2">
+                                <img src="http://placehold.it/1200x480&amp;text=three" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="3">
+                                <img src="http://placehold.it/1200x480&amp;text=four" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="4">
+                                <img src="http://placehold.it/1200x480&amp;text=five" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="5">
+                                <img src="http://placehold.it/1200x480&amp;text=six" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="6">
+                                <img src="http://placehold.it/1200x480&amp;text=seven" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="7">
+                                <img src="http://placehold.it/1200x480&amp;text=eight" class="img-responsive">
+                            </div>
+                        </div>
+                        <!-- main slider carousel nav controls --> <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                    </div>
+                </div>
+
         </div>
     </div>
-    <!-- /Full Page Image Header Area -->
+    <!--/main slider carousel-->
 
-    <!-- Intro -->
-    <div id="about" class="intro">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2>We are an experienced and qualified renovator specializing in finishing basements</h2>
-                    <p class="lead">Turn your basement space into your dream living area!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Intro -->
+</div>
 
-    <!-- Services -->
-    <div id="services" class="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <h2>Our Services</h2>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-md-offset-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-usd"></i>
-                        <h4>Free Estimates</h4>
-                        <p>Don't pay until you're happy with the plan.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-desktop"></i>
-                        <h4>Free Drafting</h4>
-                        <p>Let's design your dream living space, together.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-pencil"></i>
-                        <h4>Building Permits</h4>
-                        <p>Don't renovate without one. We'll do things right. Protect your investment.</p>
-                    </div>
-                </div>
-				<div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-university"></i>
-                        <h4>Insulating Concrete</h4>
-                        <p>Reduce your heating/cooling costs with ICF.</p>
-                    </div>
-                </div>				
-            </div>							
-            <div class="row">
-                <div class="col-md-2 col-md-offset-3 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-gavel"></i>
-                        <h4>Framing</h4>
-                        <p>Certified!</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-tint"></i>
-                        <h4>Plumbing</h4>
-                        <p>Certified!</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-bolt"></i>
-                        <h4>Electrical</h4>
-                        <p>Certified!</p>
-                    </div>
-                </div>
-			</div>
-            <div class="row">
-                <div class="col-md-2 col-md-offset-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-gavel"></i>
-                        <h4>Drywall</h4>
-                        <p>Professionally installed, seamless finish.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-photo"></i>
-                        <h4>Painting</h4>
-                        <p>Smooth finish, razor sharp edges, every time.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-cubes"></i>
-                        <h4>Tile/Granite</h4>
-                        <p>Clean surfaces, accents that stand out.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-road"></i>
-                        <h4>Flooring</h4>
-                        <p>Whether it's hardwood, laminate, or carpet, your feet will thank you for this professional installation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Services -->
-
-    <!-- Callout -->
-    <div class="callout">
-        <div class="vert-text">
-            <h2>Our 12 years experience allows us to back all our work with a complete</h2>
-			<h2><strong>FIVE YEAR WARRANTY</strong></h2>
-			<h2>Renovate with confidence</h2>
-        </div>
-    </div>
-    <!-- /Callout -->
-
-    <!-- Portfolio -->
-    <div id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <h2>Our Work</h2>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2 text-center">
-                    <div class="portfolio-item">
-                        <a href="modern.html">
-                            <img class="img-portfolio img-responsive" src="img/contemporary-basement2.jpg">
-                        </a>
-                        <h4>Modern</h4>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="portfolio-item">
-                        <a href="#">
-                            <img class="img-portfolio img-responsive" src="img/contemporary-basement3.jpg">
-                        </a>
-                        <h4>Fashionable</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2 text-center">
-                    <div class="portfolio-item">
-                        <a href="#">
-                            <img class="img-portfolio img-responsive" src="img/traditional-basement2.jpg">
-                        </a>
-                        <h4>Traditional</h4>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="portfolio-item">
-                        <a href="#">
-                            <img class="img-portfolio img-responsive" src="img/modern-basement.jpg">
-                        </a>
-                        <h4>Modern</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Portfolio -->
-
-    <!-- Call to Action -->
-    <div class="call-to-action">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-default">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Call to Action -->
 
     <!-- Footer -->
     <footer>
@@ -263,7 +133,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-
+	<script src="js/gallery.js"></script>
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
     $("#menu-close").click(function(e) {
@@ -294,7 +164,7 @@
         });
     });
     </script>
-
+	
 </body>
 
 </html>
