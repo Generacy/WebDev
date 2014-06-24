@@ -10,12 +10,15 @@ $('[id^=carousel-selector-]').click( function(){
   $('#myCarousel').carousel(id);
   $('[id^=carousel-selector-]').removeClass('selected');
   $(this).addClass('selected');
+  
 });
 
 // when the carousel slides, auto update
 $('#myCarousel').on('slid', function (e) {
+  alert("2");
   var id = $('.item.active').data('slide-number');
   id = parseInt(id);
+  alert("1");
   $('[id^=carousel-selector-]').removeClass('selected');
   $('[id^=carousel-selector-'+id+']').addClass('selected');
 });
