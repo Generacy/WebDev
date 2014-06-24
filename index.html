@@ -11,7 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
+	<link href="css/beforeafter.css" rel="stylesheet">
     <!-- Add custom CSS here -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -58,11 +58,20 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h2>We are an experienced and qualified renovator specializing in finishing basements</h2>
-                    <p class="lead">Turn your basement space into your dream living area!</p>
+                    <p class="lead">Turn your empty space into your dream living area!</p>
                 </div>
             </div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-1 text-center">
+					<div class="active item beforeAfterSlidebar" data-slide-number="0">
+						<div class="bottomImage"><img src="goward/1after.jpg" width="960" height="540"alt="after"/></div>
+						<div class="topImage"><img src="goward/1before.jpg" width="960" height="540" alt="before"/></div>
+					</div>				
+				</div>	
+			</div>
         </div>
     </div>
+	
     <!-- /Intro -->
 
     <!-- Services -->
@@ -221,13 +230,14 @@
     <!-- /Portfolio -->
 
     <!-- Call to Action -->
-    <div class="call-to-action">
+    <div id="contact" class="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-default">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+                    <h2>Contact Us</h2>
+					<h3>Let's start building your dream space</h3>
+                    <h3>(613) 818-1002</h3>
+					<h3><a href="mailto:info@embertechnologies.ca?Subject=Request for Information" target="_top">info@embertechnologies.ca</a></h3>
                 </div>
             </div>
         </div>
@@ -239,19 +249,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <ul class="list-inline">
-                        <li><i class="fa fa-facebook fa-3x"></i>
-                        </li>
-                        <li><i class="fa fa-twitter fa-3x"></i>
-                        </li>
-                        <li><i class="fa fa-dribbble fa-3x"></i>
-                        </li>
-                    </ul>
                     <div class="top-scroll">
                         <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
                     </div>
                     <hr>
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; Company 2014</p>
                 </div>
             </div>
         </div>
@@ -263,6 +265,20 @@
     <script src="js/bootstrap.js"></script>
 
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+	<script>
+	    $(".topImage").css('width', '50%');
+  $(".beforeAfterSlidebar").mousemove(
+    function(e) {
+      // get the mouse x (horizontal) position and offset of the div
+      var offset =  $(this).offset();
+      var iTopWidth = (e.pageX - offset.left);
+
+      // set width of bottomimage div
+      $(this).find(".topImage").width(iTopWidth);
+    }
+  );
+
+	</script>	
     <script>
     $("#menu-close").click(function(e) {
         e.preventDefault();
