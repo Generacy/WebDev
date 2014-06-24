@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ember Technologies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap2.css" rel="stylesheet">
+	
+
+    <!-- Add custom CSS here -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/gallery.css" rel="stylesheet">
+	<link href="css/beforeafter.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/justin_paterson.jpg" />
+</head>
+
+<body>
+
+<div class="container">
+<h1>Bootstrap 3 Thumbnail Slider / Carousel</h1>
+
+  
+  	<!-- thumb navigation carousel -->
+    <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+        
+            <!-- thumb navigation carousel items -->
+          <ul class="list-inline">
+          <li> <a id="carousel-selector-0" class="selected">
+            <img src="goward/i001.jpg" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-1">
+            <img src="goward/i002.jpg" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-2">
+            <img src="goward/i003.jpg" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-3">
+            <img src="goward/i004.jpg" class="img-responsive">
+          </a></li>
+                <li> <a id="carousel-selector-4">
+            <img src="goward/i005.jpg" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-5">
+            <img src="goward/i006.jpg" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-6">
+            <img src="goward/i007.jpg" class="img-responsive">
+          </a></li>
+          <li> <a id="carousel-selector-7">
+            <img src="goward/i008.jpg" class="img-responsive">
+          </a></li>
+            </ul>
+        
+    </div>
+  
+  
+    <!-- main slider carousel -->
+    <div class="row">
+        <div class="col-md-11" id="slider">
+            
+                <div class="col-md-11" id="carousel-bounding-box">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item beforeAfterSlidebar" data-slide-number="0">
+                                <div class="bottomImage"><img src="goward/1.jpg" width="960" height="540"alt="after" class="img-responsive"/></div>
+								<div class="topImage"><img src="goward/2.jpg" width="960" height="540" alt="before" class="img-responsive"/></div>
+                            </div>
+                            <div class="item" data-slide-number="1">
+                              <img src="goward/2.jpg" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="2">
+                                <img src="goward/3.jpg" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="3">
+                                <img src="goward/4.jpg" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="4">
+                                <img src="goward/5.jpg" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="5">
+                                <img src="goward/6.jpg" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="6">
+                                <img src="goward/7.jpg" class="img-responsive">
+                            </div>
+                            <div class="item" data-slide-number="7">
+                                <img src="goward/8.jpg" class="img-responsive">
+                            </div>
+                        </div>
+                        <!-- main slider carousel nav controls 
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>--> 
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <!--/main slider carousel-->
+
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <ul class="list-inline">
+                        <li><i class="fa fa-facebook fa-3x"></i>
+                        </li>
+                        <li><i class="fa fa-twitter fa-3x"></i>
+                        </li>
+                        <li><i class="fa fa-dribbble fa-3x"></i>
+                        </li>
+                    </ul>
+                    <div class="top-scroll">
+                        <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
+                    </div>
+                    <hr>
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+	<!--<script src="js/beforeafter/jquery-ui-1.8.13.custom.min.js"></script>
+	<script src="js/beforeafter/jquery.beforeafter-1.4.js"></script>-->
+    <script src="js/bootstrap.js"></script>
+	
+	<!--<script src="js/gallery.js"></script>-->
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+	
+	<script>
+	    $(".topImage").css('width', '50%');
+  $(".beforeAfterSlidebar").mousemove(
+    function(e) {
+      // get the mouse x (horizontal) position and offset of the div
+      var offset =  $(this).offset();
+      var iTopWidth = (e.pageX - offset.left);
+
+      // set width of bottomimage div
+      $(this).find(".topImage").width(iTopWidth);
+    }
+  );
+
+	</script>
+	<script>
+	
+	$('#myCarousel').carousel({
+		interval: 4000
+	});
+
+	// handles the carousel thumbnails
+	$('[id^=carousel-selector-]').click( function(){
+	  var id_selector = $(this).attr("id");
+	  var id = id_selector.substr(id_selector.length -1);
+	  id = parseInt(id);
+	  $('#myCarousel').carousel(id);
+	  $('[id^=carousel-selector-]').removeClass('selected');
+	  $(this).addClass('selected');
+	  //alert(1);
+	});
+
+	// when the carousel slides, auto update
+	$('#myCarousel').on('slid.bs.carousel', function (e) {
+	  var id = $('.item.active').data('slide-number');
+	  id = parseInt(id);
+	  $('[id^=carousel-selector-]').removeClass('selected');
+	  $('[id^=carousel-selector-'+id+']').addClass('selected');
+	});
+	
+	</script>
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script> 
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+	
+	
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.beforeAfterSlidebar {
+  position: relative;
+  width: 960px;
+  height: 540px;
+}
+.beforeAfterSlidebar div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.topImage {
+  border-right: solid 1px black;
+}
