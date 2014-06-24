@@ -10,7 +10,7 @@
     <title>Ember Technologies</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap2.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 	
 
     <!-- Add custom CSS here -->
@@ -93,29 +93,29 @@
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item beforeAfterSlidebar" data-slide-number="0">
-                                <div class="bottomImage"><img src="goward/1after.jpg" width="960" height="540"alt="after" class="img-responsive"/></div>
-								<div class="topImage"><img src="goward/1before.jpg" width="960" height="540" alt="before" class="img-responsive"/></div>
+                                <div class="bottomImage"><img src="goward/1after.jpg" alt="after"/></div>
+								<div class="topImage"><img src="goward/1before.jpg" alt="before"/></div>
                             </div>
                             <div class="item" data-slide-number="1">
-                              <img src="goward/2.jpg" class="img-responsive">
+                              <img src="goward/2.jpg">
                             </div>
                             <div class="item" data-slide-number="2">
-                                <img src="goward/3.jpg" class="img-responsive">
+                                <img src="goward/3.jpg">
                             </div>
                             <div class="item" data-slide-number="3">
-                                <img src="goward/4.jpg" class="img-responsive">
+                                <img src="goward/4.jpg">
                             </div>
                             <div class="item" data-slide-number="4">
-                                <img src="goward/5.jpg" class="img-responsive">
+                                <img src="goward/5.jpg">
                             </div>
                             <div class="item" data-slide-number="5">
-                                <img src="goward/6.jpg" class="img-responsive">
+                                <img src="goward/6.jpg">
                             </div>
                             <div class="item" data-slide-number="6">
-                                <img src="goward/7.jpg" class="img-responsive">
+                                <img src="goward/7.jpg">
                             </div>
                             <div class="item" data-slide-number="7">
-                                <img src="goward/8.jpg" class="img-responsive">
+                                <img src="goward/8.jpg">
                             </div>
                         </div>
                         <!-- main slider carousel nav controls 
@@ -135,20 +135,12 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <ul class="list-inline">
-                        <li><i class="fa fa-facebook fa-3x"></i>
-                        </li>
-                        <li><i class="fa fa-twitter fa-3x"></i>
-                        </li>
-                        <li><i class="fa fa-dribbble fa-3x"></i>
-                        </li>
-                    </ul>
+                <div class="col-md-6 col-md-offset-2 text-center">
                     <div class="top-scroll">
                         <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
                     </div>
                     <hr>
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>Copyright &copy; Company 2014</p>
                 </div>
             </div>
         </div>
@@ -157,53 +149,11 @@
 
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
-	<!--<script src="js/beforeafter/jquery-ui-1.8.13.custom.min.js"></script>
-	<script src="js/beforeafter/jquery.beforeafter-1.4.js"></script>-->
     <script src="js/bootstrap.js"></script>
-	
-	<!--<script src="js/gallery.js"></script>-->
+	<script src="js/beforeafter.js"></script>
+	<script src="js/gallery.js"></script>
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
 	
-	<script>
-	    $(".topImage").css('width', '50%');
-  $(".beforeAfterSlidebar").mousemove(
-    function(e) {
-      // get the mouse x (horizontal) position and offset of the div
-      var offset =  $(this).offset();
-      var iTopWidth = (e.pageX - offset.left);
-
-      // set width of bottomimage div
-      $(this).find(".topImage").width(iTopWidth);
-    }
-  );
-
-	</script>
-	<script>
-	
-	$('#myCarousel').carousel({
-		interval: 4000
-	});
-
-	// handles the carousel thumbnails
-	$('[id^=carousel-selector-]').click( function(){
-	  var id_selector = $(this).attr("id");
-	  var id = id_selector.substr(id_selector.length -1);
-	  id = parseInt(id);
-	  $('#myCarousel').carousel(id);
-	  $('[id^=carousel-selector-]').removeClass('selected');
-	  $(this).addClass('selected');
-	  //alert(1);
-	});
-
-	// when the carousel slides, auto update
-	$('#myCarousel').on('slid.bs.carousel', function (e) {
-	  var id = $('.item.active').data('slide-number');
-	  id = parseInt(id);
-	  $('[id^=carousel-selector-]').removeClass('selected');
-	  $('[id^=carousel-selector-'+id+']').addClass('selected');
-	});
-	
-	</script>
     <script>
     $("#menu-close").click(function(e) {
         e.preventDefault();
