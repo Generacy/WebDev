@@ -15,32 +15,52 @@
     <!-- Add custom CSS here -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	
+	<link href="css/grayscale.css" rel="stylesheet">
 	<link rel="shortcut icon" href="img/justin_paterson.jpg" />
 </head>
 
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
-    <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand"><a href="http://startbootstrap.com">Start Bootstrap</a>
-            </li>
-            <li><a href="#top">Home</a>
-            </li>
-            <li><a href="#about">About</a>
-            </li>
-            <li><a href="#services">Services</a>
-            </li>
-            <li><a href="#portfolio">Portfolio</a>
-            </li>
-            <li><a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /Side Menu -->
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Ember</span> Technologies
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#warranty">Warranty</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
@@ -171,7 +191,7 @@
     <!-- /Services -->
 
     <!-- Callout -->
-    <div class="callout">
+    <div id="warranty" class="warranty callout">
         <div class="vert-text">
             <h2>Our 12 years experience allows us to back all our work with a complete</h2>
 			<h2><strong>FIVE YEAR WARRANTY</strong></h2>
@@ -264,6 +284,7 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
 	<script src="js/beforeafter.js"></script>
+	<script src="js/grayscale.js"></script>
 
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
@@ -281,8 +302,8 @@
     <script>
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
+		
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
